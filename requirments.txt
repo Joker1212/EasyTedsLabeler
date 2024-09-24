@@ -1,0 +1,4 @@
+streamlit
+rapidocr_onnxruntime
+rapid_table
+pillow

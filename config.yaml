@@ -1,0 +1,5 @@
+source_folder: images
+target_folder: outputs
+prefix: ''
+model_path: models/ch_ppstructure_mobile_v2_SLANet.onnx
+shuffle: true

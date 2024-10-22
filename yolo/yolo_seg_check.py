@@ -1,4 +1,6 @@
 import os
+import random
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -76,6 +78,9 @@ if __name__ == '__main__':
     # 示例用法
     image_dir = 'new_dir/images/train'
     label_dir = 'new_dir/labels/train'
-    image_name = '02745.jpg'
+    # 随机抽取20张图像
+    all_images = [f for f in os.listdir(image_dir) if f.endswith('.jpg') and int(f.split('.')[0]) <= 8000]
+    selected_images = random.sample(all_images, 20)
 
-    check_annotation(image_dir, label_dir, image_name)
+    for image_name in selected_images:
+        check_annotation(image_dir, label_dir, image_name)
